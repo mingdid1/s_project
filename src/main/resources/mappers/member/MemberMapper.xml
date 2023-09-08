@@ -11,8 +11,19 @@
 	</resultMap>
 
 
-  <select id="loginChk" resultMap="member">
-    select * from membership where id = #{id}
-  </select>
+	<select id="loginChk" resultMap="member">
+		select * from membership where id = #{id}
+	</select>
+	
+	<select id="list" resultMap="member">
+		select * from membership
+	</select>
 
+	<select id="info" resultMap="member">
+		select * from membership where id = #{id}
+	</select>
+	
+	<insert id="reg">
+		insert into membership values(#{id}, #{pw}, #{addr})
+	</insert>
 </mapper>

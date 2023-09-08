@@ -1,5 +1,7 @@
 package com.care.root.member.service;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,6 +26,24 @@ public class MemberServiceImpl implements MemberService{
 				result =1;
 			}
 		}
+		return result;
+	}
+
+	@Override
+	public ArrayList<MemberDTO> list() {
+		ArrayList<MemberDTO> list = mm.list();
+		return list;
+	}
+
+	@Override
+	public MemberDTO info(String id) {
+		MemberDTO dto = mm.info(id);
+		return dto;
+	}
+
+	@Override
+	public int reg(MemberDTO dto) {
+		int result = mm.reg(dto);
 		return result;
 	}
 
