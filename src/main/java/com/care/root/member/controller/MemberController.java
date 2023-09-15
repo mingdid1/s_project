@@ -30,9 +30,7 @@ public class MemberController {
 	}
 	
 	@GetMapping("index")
-	public String index(HttpSession session) {
-		System.out.println(session.getAttribute("id"));
-		session.getAttribute("id");
+	public String index() {
 		return "/index";
 	}
 	

@@ -28,12 +28,6 @@
 	</bean>
 	
 	<!-- 마이바티스 xml파일과 dao 빈 연결 (해당 위치의 interface를 빈으로 등록) -->
-	<mybatis-spring:scan base-package="com.care.root.mybatis.member"/>
-	
-	<!-- 되돌리기 : rollback -->
-	<bean name="txMgr"
-		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-	   <property name="dataSource" ref="ds" />
-	</bean>
-	
+	<mybatis-spring:scan base-package="com.care.root.mybatis"/>
+
 </beans>

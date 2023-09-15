@@ -14,6 +14,7 @@
 		session id: ${id }<hr>
 		
 		<a href="index">HOME</a>
+		<a href="boardAllList">게시판</a>
 		<c:choose>
 			<c:when test="${id == null}">
 				<a href="login">회원 정보</a>
